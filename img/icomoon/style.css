@@ -1,0 +1,64 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.client-logo-1 {
+  width: 0.900390625em;
+}
+
+.client-logo-2 {
+  width: 0.76953125em;
+}
+
+.client-logo-3 {
+  width: 0.953125em;
+}
+
+.client-logo-4 {
+  width: 1.8603515625em;
+}
+
+.client-logo-5 {
+  width: 1.2548828125em;
+}
+
+.client-logo-6 {
+  width: 1.9345703125em;
+}
+
+.email-icon {
+  width: 1.3330078125em;
+}
+
+.feature-1 {
+  width: 2.25em;
+}
+
+.feature-2 {
+  width: 2.25em;
+}
+
+.feature-3 {
+  width: 2.25em;
+}
+
+.feature-4 {
+  width: 2.25em;
+}
+
+.tel-icon {
+  width: 0.625em;
+}
