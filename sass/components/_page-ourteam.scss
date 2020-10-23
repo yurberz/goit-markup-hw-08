@@ -1,0 +1,102 @@
+.ourteam-section {
+  background-color: $secondaryBgColor;
+}
+
+.ourteam-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.ourteam-item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  padding-bottom: 30px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .card-image {
+    margin-bottom: 30px;
+  }
+}
+
+.ourteam-item .card {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    color: $primaryTextColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  p {
+    margin: 0px;
+
+    color: $secondaryTextColor;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  text-align: center;
+}
+
+.icon-list {
+  display: flex;
+  width: 206px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .icon-item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  color: $colorIcon;
+
+  transition: $transitionFunction;
+
+  .hover-logo {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    color: $contrastTextColor;
+  }
+}

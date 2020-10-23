@@ -1,0 +1,65 @@
+.filter-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 34px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+  }
+}
+
+.filter-item {
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:nth-child(3n)) {
+      margin-right: 8px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.filter-button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+
+  background-color: $secondaryBgColor;
+  color: $primaryTextColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  transition: $transitionFunction;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $accentColor;
+    color: $contrastTextColor;
+  }
+}

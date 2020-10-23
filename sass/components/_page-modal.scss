@@ -1,0 +1,241 @@
+/* ============МОДАЛКА=========== */
+
+/* БЭКДРОП */
+.backdrop {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  opacity: 1;
+  transition: $transitionFunction;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ОКНО */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: $transitionFunction;
+
+  background-color: $primaryBgColor;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 768px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  .cls-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $primaryBgColor;
+
+    transition: $transitionFunction;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  & .cls-btn:hover,
+  & .cls-btn:focus {
+    cursor: pointer;
+    fill: $accentColor;
+  }
+}
+
+.modal .form-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: $boldFontWeight;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+/* ФОРМА */
+.inputs {
+  margin-bottom: 20px;
+
+  .form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form-field {
+  label {
+    margin-bottom: 4px;
+
+    color: $secondaryTextColor;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+
+  input {
+    height: 40px;
+    padding: 10px 42px;
+    outline: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: $transitionFunction;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accentColor;
+    }
+  }
+}
+
+textarea {
+  height: 120px;
+  padding: 12px 16px;
+  outline: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+
+  transition: $transitionFunction;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    line-height: 16px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.svg-modal {
+  position: absolute;
+  top: 33px;
+  left: 15px;
+
+  transition: $transitionFunction;
+
+  input:hover + &,
+  input:focus + & {
+    fill: $accentColor;
+  }
+}
+
+.agreement-form {
+  margin-bottom: 30px;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+
+  color: $secondaryTextColor;
+  line-height: 1.71;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+    margin-left: 0;
+  }
+
+  a {
+    text-decoration-line: underline;
+    color: $accentColor;
+  }
+}
+
+.agreement-checkbox {
+  position: absolute;
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-image: url(../img/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  border: 2px solid black;
+
+  transition: $transitionFunction;
+
+  .agreement-checkbox:checked + & {
+    background-color: $accentColor;
+    border: $accentColor;
+  }
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 55px;
+  background: $accentColor;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+
+  color: $contrastTextColor;
+  font-weight: $boldFontWeight;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  transition: $transitionFunction;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $hoverBtnColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

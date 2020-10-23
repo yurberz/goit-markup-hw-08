@@ -14,12 +14,47 @@
   <!-- шапка-страницы -->
   <header class="page-header">
     <div class="container top-line">
-      <nav class="nav">
+      <nav class="navigation">
         <!-- логотип -->
         <a href="./index.html" class="link logo" aria-label="логотип"><span class="logo-custom">Web</span>Studio</a>
+        <button type="button" class="menu-btn is-open" aria-expanded="false" aria-controls="menu-container"
+          data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./img/menu/sprite.svg#menu_40px"></use>
+            <use class="icon-cross" href="./img/modal/sprite.svg#cls-btn"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <ul class="site-nav list">
+            <li class="item">
+              <a href="./index.html" class="link current studio-page">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link link portfolio-page">Портфолио</a>
+            </li>
+            <li class=item">
+              <a href="" class="link contacts-page">Контакты</a>
+            </li>
+          </ul>
 
+          <ul class="header-contacts list">
+            <li class="contacts-item">
+              <a href="mailto:info@devstudio.com" class="link email">
+                <svg class="icon" width="16" height="12">
+                  <use class="email-hover" href="./img/icomoon/sprite.svg#email-icon"></use>
+                </svg>info@devstudio.com</a>
+            </li>
+
+            <li class="contacts-item">
+              <a href="tel:+380961111111" class="link phone">
+                <svg class="icon" width="10" height="16">
+                  <use href="./img/icomoon/sprite.svg#tel-icon"></use>
+                </svg>+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
         <!-- навигация-сайта -->
-        <ul class="site-nav list">
+        <!-- <ul class="site-nav list">
           <li class="item">
             <a href="./index.html" class="link current studio-page">Студия</a>
           </li>
@@ -29,11 +64,11 @@
           <li class=item">
             <a href="" class="link contacts-page">Контакты</a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
 
       <!-- телефон-електроннаяпочта -->
-      <ul class="header-contacts list">
+      <!-- <ul class="header-contacts list">
         <li class="contacts-item">
           <a href="mailto:info@devstudio.com" class="link email">
             <svg class="icon" width="16" height="12">
@@ -47,7 +82,7 @@
               <use href="./img/icomoon/sprite.svg#tel-icon"></use>
             </svg>+38 096 111 11 11</a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </header>
 
@@ -88,7 +123,7 @@
           </div>
           <div class="form-field">
             <label for="comment">Комментарий</label>
-            <textarea name="cooment" id="comment" rows placeholder="Введите текст"></textarea>
+            <textarea name="comment" id="comment" rows placeholder="Введите текст"></textarea>
           </div>
         </div>
 
@@ -100,14 +135,13 @@
         </div>
 
         <button class="submit-btn">Отправить</button>
-      </form>
     </div>
   </div>
   <main>
 
     <!-- секция-герой -->
     <section class="hero-section">
-      <div class="hero-content">
+      <div class="container hero-content">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
 
         <button type="button" class="button" data-modal-open>Заказать услугу</button>
@@ -121,9 +155,11 @@
 
         <ul class="list features-list">
           <li class="features-item">
-            <svg class="features-icon">
-              <use href="./img/icomoon/sprite.svg#feature-1"></use>
-            </svg>
+            <div class="bg-icon">
+              <svg class="features-icon" width="70" height="70">
+                <use href="./img/features/sprite.svg#antenna"></use>
+              </svg>
+            </div>
             <h3>Внимание к деталям</h3>
 
             <p>
@@ -132,9 +168,11 @@
           </li>
 
           <li class="features-item">
-            <svg class="features-icon">
-              <use href="./img/icomoon/sprite.svg#feature-2"></use>
-            </svg>
+            <div class="bg-icon">
+              <svg class="features-icon" width="70" height="70">
+                <use href="./img/features/sprite.svg#clock"></use>
+              </svg>
+            </div>
             <h3>Пунктуальность</h3>
 
             <p>
@@ -143,9 +181,11 @@
           </li>
 
           <li class="features-item">
-            <svg class="features-icon">
-              <use href="./img/icomoon/sprite.svg#feature-3"></use>
-            </svg>
+            <div class="bg-icon">
+              <svg class="features-icon" width="70" height="70">
+                <use href="./img/features/sprite.svg#diagram"></use>
+              </svg>
+            </div>
             <h3>Планирование</h3>
 
             <p>
@@ -154,9 +194,11 @@
           </li>
 
           <li class="features-item">
-            <svg class="features-icon">
-              <use href="./img/icomoon/sprite.svg#feature-4"></use>
-            </svg>
+            <div class="bg-icon">
+              <svg class="features-icon" width="70" height="70">
+                <use href="./img/features/sprite.svg#astronaut"></use>
+              </svg>
+            </div>
             <h3>Современные технологии</h3>
 
             <p>
@@ -174,7 +216,9 @@
         <ul class="list ourwork-list">
           <li class="ourwork-item">
             <div class="img-label">
-              <img class="card-image" src="./img/1.jpg" alt="картинка 1" width="370" />
+              <img class="card-image"
+                srcset="./img/our-work/ourwork-1-desk.jpg 1x, ./img/our-work/ourwork-1-desk@2x.jpg 2x"
+                src="./img/our-work/ourwork-1-desk.jpg" alt="картинка 1" width="370" />
               <div class="label">
                 <p>Десктопные приложения</p>
               </div>
@@ -183,7 +227,9 @@
 
           <li class="ourwork-item">
             <div class="img-label">
-              <img class="card-image" src="./img/2.jpg" alt="картинка 2" width="370" />
+              <img class="card-image"
+                srcset="./img/our-work/ourwork-2-desk.jpg 1x, ./img/our-work/ourwork-2-desk@2x.jpg 2x"
+                src="./img/our-work/ourwork-2-desk.jpg" alt="картинка 2" width="370" />
               <div class="label">
                 <p>Мобильные приложения</p>
               </div>
@@ -192,7 +238,9 @@
 
           <li class="ourwork-item">
             <div class="img-label">
-              <img class="card-image" src="./img/3.jpg" alt="картинка 2" width="370" />
+              <img class="card-image"
+                srcset="./img/our-work/ourwork-3-desk.jpg 1x, ./img/our-work/ourwork-3-desk@2x.jpg 2x"
+                src="./img/our-work/ourwork-3-desk.jpg" alt="картинка 3" width="370" />
               <div class="label">
                 <p>Дизайнерские решения</p>
               </div>
@@ -209,7 +257,24 @@
 
         <ul class="list ourteam-list">
           <li class="ourteam-item">
-            <img class="card-image" src="./img/igor.jpg" alt="фото Игоря" width="270" />
+            <picture class="cartoon">
+              <source srcset="./img/our-team/igor-desk.webp 1x, ./img/our-team/igor-desk@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              <source srcset="./img/our-team/igor-desk.jpg 1x, ./img/our-team/igor-desk@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source srcset="./img/our-team/igor-tablet.webp 1x, ./img/our-team/igor-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              <source srcset="./img/our-team/igor-tablet.jpg 1x, ./img/our-team/igor-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+
+              <source srcset="./img/our-team/igor-mobile.webp 1x, ./img/our-team/igor-mobile@2x.webp 2x"
+                media="(min-width: 320px)" type="image/webp">
+              <source srcset="./img/our-team/igor-mobile.jpg 1x, ./img/our-team/igor-mobile@2x.jpg 2x"
+                media="(min-width: 320px)">
+
+              <img class="card-image" src="./img/our-team/igor-mobile.jpg" alt="фото Игоря" />
+            </picture>
 
             <div class="card">
               <h3>Игорь Демьяненко</h3>
@@ -248,7 +313,24 @@
           </li>
 
           <li class="ourteam-item">
-            <img class="card-image" src="./img/olga.jpg" alt="фото Ольги" width="270" />
+            <picture class="cartoon">
+              <source srcset="./img/our-team/olga-desk.webp 1x, ./img/our-team/olga-desk@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              <source srcset="./img/our-team/olga-desk.jpg 1x, ./img/our-team/olga-desk@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source srcset="./img/our-team/olga-tablet.webp 1x, ./img/our-team/olga-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              <source srcset="./img/our-team/olga-tablet.jpg 1x, ./img/our-team/olga-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+
+              <source srcset="./img/our-team/olga-mobile.webp 1x, ./img/our-team/olga-mobile@2x.webp 2x"
+                media="(min-width: 320px)" type="image/webp">
+              <source srcset="./img/our-team/olga-mobile.jpg 1x, ./img/our-team/olga-mobile@2x.jpg 2x"
+                media="(min-width: 320px)">
+
+              <img class="card-image" src="./img/our-team/olga-mobile.jpg" alt="фото Ольги" />
+            </picture>
 
             <div class="card">
               <h3>Ольга Репина</h3>
@@ -291,7 +373,24 @@
           </li>
 
           <li class="ourteam-item">
-            <img class="card-image" src="./img/nikolay.jpg" alt="фото Николая" width="270" />
+            <picture class="cartoon">
+              <source srcset="./img/our-team/nikolay-desk.webp 1x, ./img/our-team/nikolay-desk@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              <source srcset="./img/our-team/nikolay-desk.jpg 1x, ./img/our-team/nikolay-desk@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source srcset="./img/our-team/nikolay-tablet.webp 1x, ./img/our-team/nikolay-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              <source srcset="./img/our-team/nikolay-tablet.jpg 1x, ./img/our-team/nikolay-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+
+              <source srcset="./img/our-team/nikolay-mobile.webp 1x, ./img/our-team/nikolay-mobile@2x.webp 2x"
+                media="(min-width: 320px)" type="image/webp">
+              <source srcset="./img/our-team/nikolay-mobile.jpg 1x, ./img/our-team/nikolay-mobile@2x.jpg 2x"
+                media="(min-width: 320px)">
+
+              <img class="card-image" src="./img/our-team/nikolay-mobile.jpg" alt="фото Николая" />
+            </picture>
 
             <div class="card">
               <h3>Николай Тарасов</h3>
@@ -333,7 +432,24 @@
           </li>
 
           <li class="ourteam-item">
-            <img class="card-image" src="./img/mihail.jpg" alt="фото Михаила" width="270" />
+            <picture class="cartoon">
+              <source srcset="./img/our-team/mihail-desk.webp 1x, ./img/our-team/mihail-desk@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              <source srcset="./img/our-team/mihail-desk.jpg 1x, ./img/our-team/mihail-desk@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source srcset="./img/our-team/mihail-tablet.webp 1x, ./img/our-team/mihail-tablet@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              <source srcset="./img/our-team/mihail-tablet.jpg 1x, ./img/our-team/mihail-tablet@2x.jpg 2x"
+                media="(min-width: 768px)">
+
+              <source srcset="./img/our-team/mihail-mobile.webp 1x, ./img/our-team/mihail-mobile@2x.webp 2x"
+                media="(min-width: 320px)" type="image/webp">
+              <source srcset="./img/our-team/mihail-mobile.jpg 1x, ./img/our-team/mihail-mobile@2x.jpg 2x"
+                media="(min-width: 320px)">
+
+              <img class="card-image" src="./img/our-team/mihail-mobile.jpg" alt="фото Михаила" />
+            </picture>
 
             <div class="card">
               <h3>Михаил Ермаков</h3>
@@ -435,7 +551,7 @@
   <footer class="footer">
     <div class="container">
       <!-- Секция Адрес -->
-      <section class="footer-adress">
+      <section class="section-footer-adress">
         <a href="./index.html" class="link logo-footer"><span class="logo-custom">Web</span>Studio</a>
 
         <address class="adress-footer">
@@ -516,6 +632,7 @@
       });
     })();
   </script>
+  <script src="./js/btn-menu.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 
