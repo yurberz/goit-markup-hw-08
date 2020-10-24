@@ -64,11 +64,15 @@
   }
 
   .hero-content {
-    @media screen and (max-width: 1199px) {
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
       width: 360px;
     }
 
-    width: 696px;
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+    }
+
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;

@@ -942,16 +942,22 @@ input:focus + .svg-modal {
 }
 
 .hero-section .hero-content {
-  width: 696px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
   text-align: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .hero-section .hero-content {
     width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-section .hero-content {
+    width: 696px;
   }
 }
 
@@ -1426,6 +1432,7 @@ input:focus + .svg-modal {
 .email-subscribe {
   width: 100%;
   height: 50px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   outline: 0;
   background: transparent;
@@ -1440,10 +1447,11 @@ input:focus + .svg-modal {
   .email-subscribe {
     width: 358px;
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .email-subscribe {
     margin-bottom: 20px;
     width: 450px;
