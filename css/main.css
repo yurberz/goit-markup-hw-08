@@ -391,6 +391,7 @@ body.modal-open {
 }
 
 .menu-btn:hover, .menu-btn:focus {
+  cursor: pointer;
   fill: #2196f3;
 }
 

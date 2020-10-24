@@ -33,6 +33,7 @@
 
   &:hover,
   &:focus {
+    cursor: pointer;
     fill: $accentColor;
   }
 
