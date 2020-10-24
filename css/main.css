@@ -1539,7 +1539,7 @@ input:focus + .svg-modal {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .filter-item:not(:nth-child(3n)) {
     margin-right: 8px;
   }
@@ -1548,6 +1548,13 @@ input:focus + .svg-modal {
   }
   .filter-item:last-child {
     margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter-item {
+    margin-bottom: 15px;
+    margin-right: 8px;
   }
 }
 
