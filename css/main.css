@@ -709,7 +709,14 @@ body.modal-open {
 @media screen and (max-width: 768px) {
   .modal {
     width: 450px;
-    height: 609px;
+    height: 581px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 95%;
+    padding: 30px;
   }
 }
 
@@ -1675,6 +1682,19 @@ input:focus + .svg-modal {
   font-size: 18px;
   text-align: left;
   line-height: 1.56;
+}
+
+@media screen and (max-width: 479px) {
+  .works-overlay p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 14px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.4;
+  }
 }
 
 .works-link:hover .works-overlay,

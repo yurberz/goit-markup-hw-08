@@ -45,7 +45,12 @@
 
   @media screen and (max-width: 768px) {
     width: 450px;
-    height: 609px;
+    height: 581px;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 95%;
+    padding: 30px;
   }
 
   .cls-btn {
