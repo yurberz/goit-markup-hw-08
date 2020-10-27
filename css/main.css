@@ -438,12 +438,13 @@ body.modal-open {
   margin-left: 93px;
 }
 
-@media screen and (min-width: 768px) {
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .site-nav {
     margin-left: 88px;
-  }
-  .site-nav .item:not(:last-child) {
-    margin-right: 50px;
   }
 }
 
@@ -458,6 +459,7 @@ body.modal-open {
   }
   .site-nav .item:not(:last-child) {
     margin-bottom: 40px;
+    margin-right: 0;
   }
 }
 
@@ -1558,7 +1560,7 @@ input:focus + .svg-modal {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .filter-item {
     margin-bottom: 15px;
     margin-right: 8px;
